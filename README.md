@@ -31,7 +31,7 @@
 
 
 > 📝 This repository contains the official implementation of the paper  
-> **"Towards the Terminator Economy: Assessing Job Exposure to AI through LLMs"**, accepted to **[IJCAI 2025](https://2025.ijcai.org/)** – _AI and Social Good Track_.
+> **"Towards the Terminator Economy: Assessing Job Exposure to AI through LLMs"**, accepted ar **[IJCAI 2025](https://2025.ijcai.org/)** – _AI and Social Good Track_.
 
 
 ---
