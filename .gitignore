@@ -1,0 +1,6 @@
+*.csv
+*.xlsx
+.env
+teai_failed.log
+__pycache__/
+
