@@ -116,7 +116,7 @@ Resumes automatically from checkpoints if interrupted.
 
 ### 💾 Output
 
-* `terminator_engagement_finale.xlsx` with added columns:
+* `TEAI_TRAI_final.xlsx` with added columns:
 
   * `ai_engagement_level`
   * `flag_engagement`
@@ -126,7 +126,7 @@ Resumes automatically from checkpoints if interrupted.
 ### ▶️ Execution
 
 ```bash
-python TRAI.py --input TEAI_result.xlsx --output terminator_engagement_finale.xlsx
+python TRAI.py --input TEAI_result.xlsx --output TEAI_TRAI_final.xlsx
 ```
 
 ---
@@ -135,17 +135,48 @@ python TRAI.py --input TEAI_result.xlsx --output terminator_engagement_finale.xl
 
 | Column                    | Description                                  |
 | ------------------------- | -------------------------------------------- |
+| `O*NET-SOC Code`          | Occupation Code	                             |
 | `Task ID`                 | Unique identifier of the task                |
 | `Title`, `Task`           | Occupation and associated task               |
 | `*_ratings`               | Evaluation scores from each LLM              |
 | `*_motivation`            | Model-specific reasoning                     |
-| `TEAI_rating`             | Aggregated score via mode                    |
+| `TEAI_rating`             | TEAI rating                                  |
 | `teai_summary`            | Unified summary of motivations               |
-| `ai_engagement_level`     | Final AI engagement score from API           |
+| `ai_engagement_level`     | TRAI rating                                  |
 | `flag_engagement`         | Binary flag for human complementarity        |
 | `ai_engagement_reasoning` | Justification for the final engagement score |
-
+| `Incumbents Responding`   |                                              |
+| `Domain Source`           |                                              |
+| `Task Type`               |                                              |
+| `Date`                    | Date of task entry                           |
 ---
+## 🚀 Final Step — Compute the TEAI and TRAI Indexes
+
+After running TEAI.py and TRAI.py, you can generate interpretable occupation-level automation indices using the official pipeline from:
+
+👉 AIOE: AI Occupational Exposure Toolkit
+
+This project provides a standardized and open-source framework to:
+
+* 📊 Aggregate your task-level `TEAI_rating` and `ai_engagement_level` into occupation-level indices
+
+* ⚖️ Apply employment-weighted averaging for robust labor market indicators
+
+* 🌍 Enable cross-country and cross-sector automation comparisons
+
+🔁 To ensure compatibility:
+
+* Use `TEAI_result.xlsx` and `TEAI_TRAI_final.xlsx` as your base inputs
+
+* Follow AIOE’s input formatting
+
+* Run the aggregation pipeline to compute:
+
+* The TEAI Index
+
+* The TRAI Index
+
+✅ Integrating with AIOE allows you to position your results within a broader ecosystem of empirical research on AI and the future of work.
 
 ## 🛡️ Reproducibility
 
