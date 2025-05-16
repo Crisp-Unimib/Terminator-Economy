@@ -199,8 +199,4 @@ MIT License
 
 ---
 
-## 📬 Contact
-
-For inquiries, please contact \[Antonio Serino]
-
 
