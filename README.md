@@ -168,8 +168,7 @@ These measures are used to **weight the TEAI and TRAI scores** in the aggregatio
 | `Task ID`           | Unique task identifier                                             |
 | `Task`              | Task description                                                   |
 | `Scale Name`        | Metric type (`Frequency of Task`, `Importance of Task`, etc.)      |
-| `Data Value`        | Estimated mean value (e.g., 4.5 out of 5)                          |
-| `N`                 | Number of respondents who rated the task                           |
+| `Data Value`        | Estimated value                                                    |
 | `Standard Error`    | Standard error of the estimate                                     |
 | `Lower CI Bound` / `Upper CI Bound` | 95% confidence interval bounds                     |
 | `Date`              | Collection or update date (e.g., `08/2023`)                        |
