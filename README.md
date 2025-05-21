@@ -147,11 +147,36 @@ python TRAI.py --input TEAI_result.xlsx --output TEAI_TRAI_final.xlsx
 | `ai_engagement_level`     | TRAI rating                                  |
 | `flag_engagement`         | Binary flag for human complementarity        |
 | `ai_engagement_reasoning` | Justification for the final engagement score |
-| `Incumbents Responding`   |                                              |
-| `Domain Source`           |                                              |
-| `Task Type`               |                                              |
 | `Date`                    | Date of task entry                           |
 ---
+## 🧮 O*NET Weights for Index Aggregation
+
+The provided `Task Ratings.xlsx` file includes, for each task, three key measures:
+
+- **Frequency** (`Frequency of Task`): how often a task is performed within the occupation
+- **Importance** (`Importance of Task`): how critical that task is for successful job performance
+- **Aggregated relevance**: typically constructed by combining frequency and importance
+
+These measures are used to **weight the TEAI and TRAI scores** in the aggregation phase (using the AIOE Toolkit), resulting in indices that are robust, interpretable, and representative of occupational reality.
+
+### 📊 Dataset Structure
+
+| Column              | Description                                                        |
+|---------------------|--------------------------------------------------------------------|
+| `O*NET-SOC Code`    | Standard occupational code (SOC, US taxonomy)                      |
+| `Title`             | Occupation title                                                   |
+| `Task ID`           | Unique task identifier                                             |
+| `Task`              | Task description                                                   |
+| `Scale Name`        | Metric type (`Frequency of Task`, `Importance of Task`, etc.)      |
+| `Data Value`        | Estimated mean value (e.g., 4.5 out of 5)                          |
+| `N`                 | Number of respondents who rated the task                           |
+| `Standard Error`    | Standard error of the estimate                                     |
+| `Lower CI Bound` / `Upper CI Bound` | 95% confidence interval bounds                     |
+| `Date`              | Collection or update date (e.g., `08/2023`)                        |
+
+Multiple rows for the same `Task ID` correspond to different metrics or scales (e.g., both frequency and importance).
+
+
 ## 🚀 Final Step — Compute the TEAI and TRAI Indexes
 
 After running TEAI.py and TRAI.py, you can generate interpretable occupation-level automation indices using the official pipeline from:
