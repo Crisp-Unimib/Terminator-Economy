@@ -59,7 +59,7 @@ For each evaluation:
 
     shot_key = "openchat" if "openchat" in model_name else ("mistral" if "mistral" in model_name else "orca_mini")
     examples_text = "\n\n".join(examples[shot_key])
-    task = f"Given the profession: {row['Title']}, and a specific task: '{row['Esplicitazione task']}', evaluate the combined or individual capability of these AI technologies to perform the task."
+    task = f"Given the profession: {row['Title']}, and a specific task: '{row['Task']}', evaluate the combined or individual capability of these AI technologies to perform the task."
     return f"{prefix}\n\n{examples_text}\n\n{task}"
 
 # ----------------------------- INFERENCE + CHECKPOINT -----------------------------
