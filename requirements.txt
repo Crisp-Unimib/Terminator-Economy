@@ -1,0 +1,10 @@
+pandas
+openpyxl
+python-dotenv
+numpy
+torch
+vllm
+tqdm
+requests
+nltk
+python-Levenshtein
